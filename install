@@ -14,6 +14,8 @@ udevadm control --reload-rules
 sudo mv ./kiosk.service /lib/systemd/system/kiosk.service
 sudo systemctl enable kiosk.service
 sudo systemctl start kiosk.service
+
+###   AUTOLOGIN ### USER   ###
 sudo systemctl edit getty@tty1.service
 #ADD#
 [Service]
@@ -26,7 +28,7 @@ Type=idle
 #END#
 nano .bash_profile
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx --
-#quiet boot# 
+#####  setup quiet boot   ######## 
 sudo nano /boot/cmdline.txt
 #add#
 loglevel=3 quiet logo.nologo

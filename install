@@ -1,0 +1,29 @@
+sudo apt updade
+sudo apt upgrade
+sudo apt install freerdp2-x11 libavcodec-dev libasound2-dev libpulse-dev libxv-dev git xdotool xserver-xorg x11-xserver-utils xinit openbox
+cd /etc/
+https://github.com/IELSMalta/ielskiosk.git
+# DISABLE V3D DRIVER You could also add module_blacklist=v3d to /boot/cmdline.txt
+adduser vdi
+usermod -aG sudo vdi
+usermod -aG plugdev vdi
+sudo mv ./kiosk.service /lib/systemd/system/kiosk.service
+sudo systemctl enable kiosk.service
+sudo systemctl start kiosk.service
+sudo systemctl edit getty@tty1.service
+#ADD#
+[Service]
+
+ExecStart=
+
+ExecStart=-/sbin/agetty --noissue --autologin myusername %I $TERM
+
+Type=idle
+#END#
+nano .bash_profile
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx --
+#quiet boot# 
+sudo nano /boot/cmdline.txt
+#add#
+loglevel=3 quiet logo.nologo
+#END#

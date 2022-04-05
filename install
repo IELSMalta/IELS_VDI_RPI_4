@@ -1,5 +1,6 @@
 sudo apt updade
 sudo apt upgrade
+systemctl disable rsyslog
 sudo apt install freerdp2-x11 libavcodec-dev libasound2-dev libpulse-dev libxv-dev git xdotool xserver-xorg x11-xserver-utils xinit openbox cups hplip hplip-gui
 cd /etc/
 https://github.com/IELSMalta/ielskiosk.git

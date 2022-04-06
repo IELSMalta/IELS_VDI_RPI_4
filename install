@@ -3,7 +3,7 @@ sudo apt upgrade
 systemctl disable rsyslog
 sudo apt install freerdp2-x11 libavcodec-dev libasound2-dev libpulse-dev libxv-dev git xdotool xserver-xorg x11-xserver-utils xinit openbox cups hplip hplip-gui cockpit cockpit-pcp
 cd /etc/
-https://github.com/IELSMalta/ielskiosk.git
+sudo git clone https://github.com/IELSMalta/ielskiosk.git
 # DISABLE V3D DRIVER You could also add module_blacklist=v3d to /boot/cmdline.txt
 ######## LOG AS ROOT #######
 adduser ###

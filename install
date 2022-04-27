@@ -6,6 +6,7 @@ cd /etc/
 sudo git clone https://github.com/IELSMalta/ielskiosk.git
 
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target #DISABLE SUSPEND AND HIBERNATION#
+https://shallowsky.com/blog/linux/prevent-sleep-systemd.html
 
 # DISABLE V3D DRIVER You could also add module_blacklist=v3d to /boot/cmdline.txt
 ######## LOG AS ROOT #######

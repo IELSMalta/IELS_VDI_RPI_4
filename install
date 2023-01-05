@@ -86,3 +86,6 @@ $ sudo cp ~/my_splash.png /usr/share/plymouth/themes/pix/splash.png
 As described in above assumption, “my_splash.png” should be your new splash image.
 
 Perhaps try CONF_SWAPSIZE=0 in /etc/dphys-swapfile
+
+
+https://forums.raspberrypi.com/viewtopic.php?t=292360
